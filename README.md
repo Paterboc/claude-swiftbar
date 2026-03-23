@@ -16,21 +16,35 @@ A [SwiftBar](https://swiftbar.app) plugin that shows your Claude Code rate limit
 - **Yellow** — 50–80% usage
 - **Red** — over 80% usage
 
-## Quick Install
+## Install
+
+**1. Install SwiftBar** (if you don't have it):
+
+```bash
+brew install --cask swiftbar
+```
+
+Open SwiftBar and set the plugin directory when prompted (default is fine).
+
+**2. Run the installer:**
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/Paterboc/claude-swiftbar/main/install.sh)
 ```
 
 This will:
-1. Install the SwiftBar plugin
-2. Set up the Claude Code statusline hook
-3. Configure `~/.claude/settings.json`
+- Copy the plugin to your SwiftBar plugins directory
+- Install the Claude Code statusline hook at `~/.claude/statusline-command.sh`
+- Add the `statusLine` config to `~/.claude/settings.json`
+
+**3. Start using Claude Code.** Send any message and the menu bar will populate within 30 seconds.
+
+> If you already have a running Claude Code session, restart it so the statusline hook takes effect.
 
 ## Requirements
 
 - macOS
-- [SwiftBar](https://swiftbar.app) (`brew install --cask swiftbar`)
+- [SwiftBar](https://swiftbar.app)
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI
 - Python 3
 
